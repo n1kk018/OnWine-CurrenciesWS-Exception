@@ -1,4 +1,5 @@
 package fr.afcepf.atod.ws.currency.exception;
+
 /**
  * Custom exceptions for currencies converter ws.
  * @author nikko
@@ -13,22 +14,21 @@ public class CurrenciesWSException extends Exception {
     /**
      * generic error.
      */
-    private CurrenciesWSError wsError;
+    private CurrenciesWSError wsError = CurrenciesWSError.CA_NE_FONCTIONNE_PAS;
     /**
-     * Constructor with a message.
-     * @param message message
+     * Default Constructor.
      */
-    public CurrenciesWSException(String message) {
-        super(message);
+    public CurrenciesWSException() {
+        super();
     }
     /**
      * Constructor with an error code and a message.
-     * @param paramWsError error code
-     * @param message message
+     * @param paramMessage le message
+     * @param paramWsError le code d'erreur
      */
-    public CurrenciesWSException(CurrenciesWSError paramWsError,
-            String message) {
-        super(message);
+    public CurrenciesWSException(String paramMessage,
+            CurrenciesWSError paramWsError) {
+        super(paramMessage);
         wsError = paramWsError;
     }
     /**

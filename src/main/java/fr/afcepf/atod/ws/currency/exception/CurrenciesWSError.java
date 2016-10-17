@@ -24,5 +24,9 @@ public enum CurrenciesWSError {
     /**
      * L'update ne peut être faite.
      */
-    UPDATE_NON_EFFECTUE_EN_BASE
+    UPDATE_NON_EFFECTUE_EN_BASE,
+    /**
+     * La base est vide.
+     */
+    EMPTY_DB
 }
