@@ -22,6 +22,13 @@ public class CurrenciesWSException extends Exception {
         super();
     }
     /**
+     * Constructor with  a message.
+     * @param paramMessage le message
+     */
+    public CurrenciesWSException(String paramMessage) {
+        super(paramMessage);
+    }
+    /**
      * Constructor with an error code and a message.
      * @param paramMessage le message
      * @param paramWsError le code d'erreur
